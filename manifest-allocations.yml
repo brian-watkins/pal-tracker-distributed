@@ -2,10 +2,10 @@ applications:
 - name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   routes:
-  - route: allocations-pal-fun.apps.pcfone.pivotal.io
+  - route: allocations-pal-fun.apps.pcfone.io
   memory: 1G
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-fun.apps.pcfone.pivotal.io
+    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-fun.apps.pcfone.io
   services:
   - tracker-allocations-database
