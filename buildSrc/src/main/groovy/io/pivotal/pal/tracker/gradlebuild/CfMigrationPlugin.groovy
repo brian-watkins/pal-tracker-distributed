@@ -23,7 +23,7 @@ class CfMigrationPlugin implements Plugin<Project> {
                     doLast {
                         println "Opening Tunnel for $appName"
                         Thread.start {
-                            println(["bash", "-c", "if cf ssh ${appName} -c pwd ; then echo 'opened tunnel' else echo 'try again to open tunnel' fi"].execute().text)
+                            println(["bash", "-c", "if cf ssh ${appName} -c pwd ; then echo 'opened tunnel'; else echo 'try again to open tunnel'; fi"].execute().text)
                             tunnelProcess = "cf ssh -N -L 63306:${getMysqlHost(appName, databaseInstanceName)}:3306 $appName".execute()
                         }
                         sleep 25_000L
