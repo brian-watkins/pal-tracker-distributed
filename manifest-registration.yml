@@ -8,3 +8,8 @@ applications:
   services:
   - tracker-registration-database
   - tracker-service-registry
+  env:
+    GRANT_TYPE: client_credentials
+    SECURITY_USER_NAME: actuator
+    SECURITY_USER_PASSWORD: operations4red
+    UAA_HOST: https://my-uaa.apps.pcfone.io
